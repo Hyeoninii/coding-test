@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.StringTokenizer;
-//타입 체크
+
+//타입 체크 int타입은 에러, long타입은 통과
 public class b10986 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
