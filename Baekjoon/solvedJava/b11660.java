@@ -1,3 +1,5 @@
+package Baekjoon.solvedJava;
+
 import java.util.StringTokenizer;
 import java.io.*;
 

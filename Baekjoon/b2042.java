@@ -1,3 +1,5 @@
+package Baekjoon;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
@@ -20,9 +22,8 @@ public class b2042 {
             arr[i] = Long.parseLong(br.readLine());
         }
 
-        buildTree
     }
-    public static long buildTree
+    //public static long buildTree
 }
 
         /*
