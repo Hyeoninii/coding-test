@@ -1,4 +1,4 @@
-package Baekjoon.solvedJava;
+package Baekjoon.bronze;
 
 import java.io.*;
 import java.util.StringTokenizer;

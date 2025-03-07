@@ -1,6 +1,13 @@
-package Baekjoon.solvedJava;
+package Baekjoon.silver;
 
 import java.io.*;
+
+/*
+투 포인터를 사용하면 3가지 케이스로 나뉜다
+n == end 일 때, n이하 이므로 같아지면 종료 (기존에 count가 1로 시작)
+n > sum 일 때, 구간 합이 더 작으므로 end를 하나 늘려줌
+n < sum 일 때, 구간 합이 더 많으므로 start를 하나 늘려줌
+ */
 
 public class b2018 {
     public static void main(String[] args) throws IOException {
@@ -14,13 +21,6 @@ public class b2018 {
         int count = 1;
 
         n = Integer.parseInt(br.readLine());
-
-        /*
-        투 포인터를 사용하면 3가지 케이스로 나뉜다
-        n == end 일 때, n이하 이므로 같아지면 종료 (기존에 count가 1로 시작)
-        n > sum 일 때, 구간 합이 더 작으므로 end를 하나 늘려줌
-        n < sum 일 때, 구간 합이 더 많으므로 start를 하나 늘려줌
-         */
 
         while(end != n) {
             if (sum == n) {
