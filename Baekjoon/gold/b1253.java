@@ -12,27 +12,38 @@ public class b1253 {
         int n = Integer.parseInt(br.readLine());
         st = new StringTokenizer(br.readLine());
 
-        int[] arr = new int[n+1];
-        for (int i = 1; i < n+1; i++) {
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
             arr[i] = Integer.parseInt(st.nextToken());
         }
         Arrays.sort(arr);
 
-        int start = 1;
-        int end = 2;
-        int k = 3;
+
         int count = 0;
 
-        while (start < end) {
-            if(start != k && end != k) {
-                if(arr[start] + arr[end] == k) {
-                    count++;
-                    k++;
-                } else if(arr[start] + arr[end] < k) {
+        for(int k=0; k < n; k++) {
+            int start = 0;
+            int end = n-1;
+            while(start < end) {
+                if(start == k) {
                     start++;
+                    continue;
+                }
+                if(end == k) {
+                    end--;
+                    continue;
+                }
+                int sum = arr[start] + arr[end];
+                if(sum == arr[k]) {
+                    count++;
+                    break;
+                } else if(sum < arr[k]) {
+                    start++;
+                } else {
+                    end--;
                 }
             }
-
         }
+        System.out.println(count);
     }
 }
